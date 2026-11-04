@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#16324a">
+  <meta name="description" content="Serious game d'hygiène hospitalière : 15 dossiers patients pour lever les précautions complémentaires au bon moment (BMR, BHRe, C. difficile, grippe, COVID-19, tuberculose, rougeole...).">
+  <title>Porte ouverte | Lever les précautions complémentaires au bon moment</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=zodiak@500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Mesure d'audience Plausible, sans cookie ni identifiant persistant.
+       Chargée uniquement sur le site public GitHub Pages. -->
+  <script src="analytics.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
+    plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init({outboundLinks:false,fileDownloads:false,formSubmissions:false,transformRequest:window.poAnalytics.transformRequest});
+    if(location.hostname==="jetpod.github.io"&&location.pathname.startsWith("/porte-ouverte/")){
+      const s=document.createElement("script");s.async=true;s.src="https://plausible.io/js/pa-tStNr5ifi5Ciowo1JXWCY.js";document.head.appendChild(s);
+    }
+  </script>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="header">
+  <a class="brand" href="#" id="brand" aria-label="Porte ouverte, accueil">
+    <svg aria-hidden="true" viewBox="0 0 40 40" width="32" height="32" fill="none"><rect x="8" y="4" width="22" height="32" rx="2" stroke="currentColor" stroke-width="2.6"/><path d="M14 4v32" stroke="currentColor" stroke-width="2" opacity=".35"/><rect x="16" y="12" width="10" height="6" rx="1.2" fill="var(--signal)"/><circle cx="25" cy="23" r="1.8" fill="currentColor"/></svg>
+    <span><b>Porte ouverte</b><small>Lever les précautions au bon moment</small></span>
+  </a>
+  <nav class="topnav" aria-label="Navigation principale">
+    <button class="nav" data-view="home">Dossiers</button>
+    <button class="nav" data-view="memo">Aide-mémoire</button>
+    <button class="nav" data-view="guide">Animer</button>
+    <button class="nav" data-view="sources">Sources</button>
+    <button class="quiet" id="theme" aria-label="Basculer le thème">Sombre</button>
+  </nav>
+</header>
+<main id="main" tabindex="-1"></main>
+<footer>
+  <p>Prototype pédagogique v0.1 · novembre 2026 · Cas fictifs. Relecture par l'équipe opérationnelle d'hygiène requise avant usage institutionnel.</p>
+  <p>Progression conservée uniquement tant que la page reste ouverte. Aucun compte, aucun stockage.</p>
+</footer>
+<dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+</body>
+</html>
