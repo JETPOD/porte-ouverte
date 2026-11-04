@@ -1,4 +1,4 @@
-/* Porte ouverte : contenu pédagogique.
+/* Levée de précautions complémentaires : contenu pédagogique.
    Dossiers fictifs. Chaque correction renvoie à des sources publiques vérifiables.
    Types de réponse :
    ok     = décision conforme

@@ -1,4 +1,4 @@
-/* Porte ouverte : moteur du jeu. Aucune donnée stockée hors de la page. */
+/* Levée de précautions complémentaires : moteur du jeu. Aucune donnée stockée hors de la page. */
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const main = $("#main");
@@ -72,8 +72,8 @@
       <section class="hero">
         <div class="hero-text">
           <p class="eyebrow">Serious game · hygiène hospitalière</p>
-          <h1>Porte ouverte</h1>
-          <p class="lede">Lever les précautions complémentaires au bon moment : ni trop tôt, ni trop tard.</p>
+          <h1>Levée de précautions complémentaires</h1>
+          <p class="lede">Ni trop tôt, ni trop tard : décider au bon moment, sur le bon critère.</p>
           <p>15 dossiers patients, 45 décisions. Chaque réponse est classée : décision juste, risque de transmission (levée prématurée), précaution injustifiée (maintien trop long) ou écart de pratique. Les deux erreurs comptent : lever trop tôt expose les autres patients, maintenir trop longtemps a aussi un coût pour le patient isolé.</p>
           <div class="row"><button class="btn big" data-act="start" data-m="${firstOpen()}">Ouvrir le premier dossier</button><button class="btn ghost" data-view="memo">Aide-mémoire des critères</button></div>
         </div>

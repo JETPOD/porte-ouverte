@@ -198,3 +198,10 @@ dialog::backdrop{background:rgba(10,20,30,.45)}
   .module,.memo-rows,.rtable,.kpi{box-shadow:none;break-inside:avoid}
   a{color:#000}
 }
+@media (max-width:760px){
+  .header{flex-wrap:wrap;gap:.35rem;padding-top:.5rem;padding-bottom:.45rem}
+  .brand b{font-size:1.02rem}
+  .brand svg{width:26px;height:26px}
+  .topnav{width:100%;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:.1rem .05rem}
+  .topnav .nav,.topnav .quiet{padding:.3rem .4rem;font-size:.76rem;white-space:nowrap}
+}

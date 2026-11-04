@@ -8,13 +8,13 @@ Schéma fermé (`analytics.js`) : URL réduite à origine + chemin, référent s
 
 Settings, puis Goals, puis Add goal, puis Custom event, avec ces noms exacts (les objectifs ne sont pas rétroactifs) :
 
-1. `Porte ouverte · Jeu démarré`
-2. `Porte ouverte · Module 1 démarré`
-3. `Porte ouverte · Module 1 terminé`
-4. `Porte ouverte · Module 2 démarré`
-5. `Porte ouverte · Module 2 terminé`
-6. `Porte ouverte · Module 3 démarré`
-7. `Porte ouverte · Module 3 terminé`
-8. `Porte ouverte · Parcours terminé`
+1. `Levée de précautions · Jeu démarré`
+2. `Levée de précautions · Module 1 démarré`
+3. `Levée de précautions · Module 1 terminé`
+4. `Levée de précautions · Module 2 démarré`
+5. `Levée de précautions · Module 2 terminé`
+6. `Levée de précautions · Module 3 démarré`
+7. `Levée de précautions · Module 3 terminé`
+8. `Levée de précautions · Parcours terminé`
 
 Chaque événement est envoyé au plus une fois par chargement de page.

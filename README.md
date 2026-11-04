@@ -1,4 +1,6 @@
-# Porte ouverte : lever les précautions complémentaires au bon moment
+# Levée de précautions complémentaires
+
+Ni trop tôt, ni trop tard : décider au bon moment.
 
 Serious game d'hygiène hospitalière sur la levée des précautions complémentaires (contact, C. difficile, BMR et BHRe, gouttelettes, air). Ni trop tôt, ni trop tard.
 
@@ -33,7 +35,7 @@ Liste complète avec liens dans la page Sources du jeu.
 ## Intégration WordPress
 
 ```html
-<iframe src="https://jetpod.github.io/porte-ouverte/" title="Porte ouverte : lever les précautions complémentaires" style="width:100%;height:900px;border:0" loading="lazy"></iframe>
+<iframe src="https://jetpod.github.io/porte-ouverte/" title="Levée de précautions complémentaires" style="width:100%;height:900px;border:0" loading="lazy"></iframe>
 ```
 
 ## Technique
