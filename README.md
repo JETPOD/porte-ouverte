@@ -19,7 +19,7 @@ Jouer en ligne : https://jetpod.github.io/porte-ouverte/
 ## Avertissements
 
 - Prototype pédagogique, cas fictifs. Relecture par l'équipe opérationnelle d'hygiène requise avant usage institutionnel.
-- Ce jeu n'est ni un protocole de soins ni une attestation de formation. Le protocole local de l'établissement prévaut.
+- Ce jeu n'est ni un protocole de soins ni une validation des compétences. Une attestation de fin de module indique le palier atteint (Participation, Réussite, Réussite avec excellence), signée Dr Jean-Etienne Podik, EOH AHNAC. Le protocole local de l'établissement prévaut.
 - Aucune donnée personnelle : progression conservée en mémoire de page uniquement.
 
 ## Sources principales

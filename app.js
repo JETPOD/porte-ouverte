@@ -218,9 +218,10 @@
         </div>
         <table class="rtable"><thead><tr><th>Dossier</th><th>Décisions</th></tr></thead><tbody>${rows}</tbody></table>
         ${risks.length ? `<div class="alert"><h3>Erreurs critiques à reprendre</h3><ul>${risks.join("")}</ul></div>` : ""}
-        <p class="muted small">Score pédagogique, sans valeur d'évaluation ni d'attestation. Aucune réponse n'est enregistrée ni transmise.</p>
+        <p class="muted small">Score pédagogique, sans valeur d'évaluation des compétences. L'attestation indique seulement le palier atteint. Aucune réponse ni aucun nom n'est enregistré ou transmis.</p>
         <div class="row noprint">
           ${others.length ? `<button class="btn" data-act="start" data-m="${others[0].id}">Parcours suivant : ${esc(others[0].title)}</button>` : ""}
+          ${modDone(id) ? `<button class="btn" data-act="attest" data-m="${id}">Obtenir mon attestation</button>` : ""}
           <button class="btn ghost" data-act="print">Imprimer le rapport</button>
           <button class="btn ghost" data-act="replay" data-m="${id}">Rejouer ce parcours</button>
           <button class="btn ghost" data-view="memo">Aide-mémoire</button>
@@ -273,7 +274,7 @@
         <div class="alert soft"><h3>Règles pour l'animateur</h3><ul>
           <li>Les dossiers sont fictifs. Ne pas les rapprocher de patients réels.</li>
           <li>Les protocoles locaux validés par le CLIN priment pour l'organisation ; signaler tout écart entre le jeu et le protocole local.</li>
-          <li>Le score est pédagogique : il ne sert ni à évaluer ni à attester une compétence.</li>
+          <li>Le score est pédagogique : il ne sert pas à évaluer une compétence. L'attestation de fin de module indique le palier atteint (seuil de réussite : 80 % de décisions justes, sans risque de transmission).</li>
         </ul></div>
         <div class="row noprint"><button class="btn ghost" data-act="print">Imprimer le guide</button></div>
       </section>`, "guide");
@@ -286,7 +287,7 @@
         <h1>Références utilisées</h1>
         <p class="lede">Recommandations françaises en vigueur à la date de rédaction (novembre 2026). Vérifier les mises à jour avant tout usage institutionnel.</p>
         ${srcList(Object.keys(SOURCES))}
-        <div class="alert soft"><h3>Statut du prototype</h3><p>Prototype pédagogique v0.1, cas fictifs. Relecture par l'équipe opérationnelle d'hygiène requise avant usage institutionnel. Ce jeu n'est ni un protocole de soins, ni un examen validant, ni une attestation.</p></div>
+        <div class="alert soft"><h3>Statut du prototype</h3><p>Prototype pédagogique v0.1, cas fictifs. Relecture par l'équipe opérationnelle d'hygiène requise avant usage institutionnel. Ce jeu n'est ni un protocole de soins ni un examen validant. L'attestation de fin de module indique seulement le palier atteint.</p></div>
       </section>`, "sources");
   }
 
@@ -301,6 +302,7 @@
     else if (a === "next") next();
     else if (a === "open") openDossier(+b.dataset.m, +b.dataset.d);
     else if (a === "print") window.print();
+    else if (a === "attest") { const m = Number(b.dataset.m) || b.dataset.m, M = mod(m), t = tally(m); window.SGAttestation && window.SGAttestation.open({ jeu: "Levée de précautions complémentaires", module: `module ${M.code} : ${M.title}`, code: "LPC", color: "#1f5f8b", ratio: t.ok / totalDecisions(m), critical: t.risk }); }
   });
   $("#brand").addEventListener("click", (e) => { e.preventDefault(); home(); });
   home();
